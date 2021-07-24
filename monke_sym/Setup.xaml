@@ -8,8 +8,13 @@
         Title="Setup" Height="450" Width="800">
     <StackPanel Margin="10">
         <TextBlock FontWeight="Bold" Name="ChooseGender">Choose your monkeys gender</TextBlock>
-        <RadioButton>Male</RadioButton>
-        <RadioButton>Female</RadioButton>
-        <RadioButton IsChecked="True">I tried asking and things got violent</RadioButton>
+        <RadioButton Name="Male">Male</RadioButton>
+        <RadioButton Name="Female">Female</RadioButton>
+        <RadioButton Name="Liberal" IsChecked="True">I tried asking and things got violent</RadioButton>
+        <TextBlock FontWeight="Bold" Padding="10px" Height="30"><Run Text="Difficulty"/></TextBlock>
+        <RadioButton IsChecked="True">Normal</RadioButton>
+        <RadioButton>Hard</RadioButton>
+        <RadioButton>Impossible (really)</RadioButton>
     </StackPanel>
+   
 </Window>

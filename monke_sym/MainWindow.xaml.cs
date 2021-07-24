@@ -32,4 +32,20 @@ namespace monke_sym
 
         }
     }
+
+    public class Utils
+    {
+        public static dynamic GetCheckedRadioButton(RadioButton[] buttons) 
+        {
+            foreach (RadioButton btn in buttons)
+            {
+                if (btn.IsChecked == true)
+                {
+                    return btn;
+                }
+            }
+
+            return false;
+        }
+    }
 }

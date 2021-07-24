@@ -17,13 +17,21 @@ namespace monke_sym
     /// </summary>
     public partial class Setup : Window
     {
-        private string moneyName;
+        private string gender;
         public Setup(string name)
         {
-            moneyName = name;
             InitializeComponent();
             ChooseGender.Text = $"Choose {name}'s gender!";
-
+            RadioButton[] btns = new RadioButton[2];
+            btns[0] = Male;
+            btns[1] = Female; //scuffed late night C#
+            btns[2] = Liberal;
+            dynamic btn = Utils.GetCheckedRadioButton(btns);
+            if (btn)
+            {
+                RadioButton castedBtn = btn;
+                gender = castedBtn.Name;
+            }
         }
     }
 }
